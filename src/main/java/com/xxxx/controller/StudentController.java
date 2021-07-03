@@ -66,7 +66,5 @@ public class StudentController {
         }else {
             return "fail.jsp";
         }
-
-        
     }
 }
