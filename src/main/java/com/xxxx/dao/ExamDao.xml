@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--约束文件-->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xxxx.dao.ExamDao">
+    <select id="selectAllExam" resultType="com.xxxx.domian.Exam">
+        select * from exam;
+    </select>
+    <select id="selectExamByName" resultType="com.xxxx.domian.Exam">
+        select * from exam where examname=#{examname};
+    </select>
+    <insert id="insertExam">
+        insert into exam(examname,examscore,examaddress,examdata) values (#{examname},#{examscore},#{examscore},#{examdata});
+    </insert>
+    <update id="updataExam">
+        update exam set  examdata=#{examdata},examscore=#{examscore},examaddress=#{examaddress} ;
+    </update>
+</mapper>
